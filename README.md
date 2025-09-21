@@ -1,4 +1,5 @@
-_config.yml
+## _config.yml
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -550,7 +551,7 @@ _config.yml
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
             <p>Follow me on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, and <a href="#">GitHub</a>.</p>
         </div>
     </footer>
