@@ -37,7 +37,7 @@ project-folder/
 * Responsive Layout (Flexbox & Grid)
 
 
-## 🔧 How to Use
+## How to Use
 
 1. Clone this repository:
 
