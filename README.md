@@ -1,75 +1,290 @@
-# Cybersecurity & Web Development Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity & Web Development Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
 
-This repository contains a **personal portfolio website** showcasing skills, projects, certifications, and contact information related to **Cybersecurity** and **Web Development**.
+    /* === Navbar === */
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
 
-## Features
+    /* === Hero Section === */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 4rem 2rem;
+      background: linear-gradient(rgba(44,62,80,0.7), rgba(44,62,80,0.7)),
+                  url('images/hero-banner.jpg') no-repeat center/cover;
+      color: white;
+    }
+    .hero img {
+      max-width: 250px;
+      border-radius: 50%;
+    }
+    .hero-text {
+      max-width: 500px;
+    }
+    .hero-buttons {
+      margin-top: 1rem;
+    }
+    .btn {
+      padding: 0.7rem 1.2rem;
+      margin: 0.3rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-primary { background: #3498db; color: white; }
+    .btn-secondary { background: #2ecc71; color: white; }
 
-* **Responsive Navigation Bar** with logo and smooth navigation links.
-* **Hero Section** with profile picture, resume download, and call-to-action buttons.
-* **About Me Section** highlighting personal background, resume, and testimonials.
-* **Projects Showcase** featuring sample projects with descriptions and preview buttons.
-* **Certifications List** to display professional credentials.
-* **Skills Section** showcasing technical expertise.
-* **Contact Form** for easy communication.
-* **Footer** with copyright.
+    /* === Sections === */
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #3498db;
+      margin-bottom: 1rem;
+    }
 
-## Project Structure
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about img {
+      width: 250px;
+      border-radius: 10px;
+    }
+    .testimonials {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .testimonial {
+      flex: 1;
+      background: #ecf0f1;
+      padding: 1rem;
+      border-radius: 5px;
+      font-style: italic;
+    }
 
-```
-project-folder/
-│
-├── index.html               # Main portfolio HTML file
-├── images/                  # Folder containing all images
-│   ├── logo.png
-│   ├── hero-banner.jpg
-│   ├── profile.png
-│   ├── about-photo.png
-│   ├── E-Commerce Website.png
-│   ├── Task Management App.png
-│   └── Weather Dashboard.png
-└── README.md                # Documentation
-```
+    /* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
 
-## Technologies Used
+    /* Certifications */
+    .certifications ul {
+      list-style: none;
+      padding: 0;
+    }
+    .certifications li {
+      background: white;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-* **HTML5**
-* **CSS3 (Vanilla CSS)**
-* Responsive Layout (Flexbox & Grid)
+    /* Skills Section */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill {
+      background: #ecf0f1;
+      padding: 0.8rem 1.2rem;
+      border-radius: 20px;
+    }
 
+    /* Contact */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-## 🔧 How to Use
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #2c3e50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
 
-1. Clone this repository:
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+    <a href="#home" style="display:flex; align-items:center; text-decoration:none; color:white;">
+      <img src="images/logo.png" alt="Logo" style="height:40px; margin-right:10px;">
+      <span style="font-size:1.2rem; font-weight:bold;">My Portfolio</span>
+    </a>
+  </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-   ```bash
-   git clone https://github.com/your-username/portfolio.git
-   ```
-2. Navigate to the project folder:
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="images/profile.png" alt="Profile Picture">
+    <div class="hero-text">
+      <h1>Cybersecurity & Web Development</h1>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Download Resume</button>
+        <button class="btn btn-secondary">Hire Me</button>
+      </div>
+    </div>
+  </section>
 
-   ```bash
-   cd portfolio
-   ```
-3. Open the `index.html` file in your browser:
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="images/about-photo.png" alt="About Me">
+      <div>
+        <p>I’m a Cybersecurity and Web Development enthusiast with experience in building secure and scalable applications.</p>
+        <button class="btn btn-primary">Download Resume</button>
+        <div class="testimonials">
+          <div class="testimonial">“Hardworking and detail-oriented.”</div>
+          <div class="testimonial">“A reliable team player with strong skills.”</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-   ```bash
-   open index.html
-   ```
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="images/E-Commerce Website.png" alt="E-Commerce Website">
+        <h3>E-Commerce Website</h3>
+        <p>Web app focusing on secure authentication.</p>
+        <button>View Project</button>
+      </div>
+      <div class="project-card">
+        <img src="images/Task Management App.png" alt="Task Management App">
+        <h3>Task Management App</h3>
+        <p>Responsive website with cybersecurity features.</p>
+        <button>View Project</button>
+      </div>
+      <div class="project-card">
+        <img src="images/Weather Dashboard.png" alt="Weather Dashboard">
+        <h3>Weather Dashboard</h3>
+        <p>Automated tool for penetration testing.</p>
+        <button>View Project</button>
+      </div>
+    </div>
+  </section>
 
-   or drag & drop the file into your browser.
+  <!-- Certifications -->
+  <section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Certified Ethical Hacker (CEH)</li>
+      <li>CompTIA Security+</li>
+      <li>AWS Cloud Practitioner</li>
+    </ul>
+  </section>
 
-## Live Demo
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML/CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">Network Security</div>
+      <div class="skill">Cloud Computing</div>
+    </div>
+  </section>
 
-If hosted on GitHub Pages, access the portfolio via:
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Let's Connect</button>
+    </form>
+  </section>
 
-```
-https://your-username.github.io/portfolio/
-```
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 | Cybersecurity & Web Development Portfolio</p>
+  </footer>
 
-## Contributors
-
-* Mark Anthony Diano <lr.madiano@mmdc.mcl.edu.ph>
-* Graceille Subingsubing <lr.gsubingsubing@mmdc.mcl.edu.ph>
-* Kevin Angelo Metro <lr.kametro@mmdc.mcl.edu.ph>
----
-
-© 2025 | Cybersecurity & Web Development Portfolio
+</body>
+</html>
