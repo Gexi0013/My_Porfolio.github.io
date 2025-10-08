@@ -70,6 +70,7 @@ https://your-username.github.io/portfolio/
 * Mark Anthony Diano <lr.madiano@mmdc.mcl.edu.ph>
 * Graceille Subingsubing <lr.gsubingsubing@mmdc.mcl.edu.ph>
 * Kevin Angelo Metro <lr.kametro@mmdc.mcl.edu.ph>
+* Mentor Email: anunang@mmdc.mcl.edu.ph added as collaborator
 ---
 
 © 2025 | Cybersecurity & Web Development Portfolio
