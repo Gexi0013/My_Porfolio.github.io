@@ -585,25 +585,17 @@
     // Initialize all event listeners when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
         // Resume download buttons
-        const donwloadButtons = [
-            document.getElementById('downloadResume'),
-            document.getElementById('downloadResume2')
-        ];
-        
-        downloadButtons.forEach(button => {
-            if (button) {
-                button.addEventListener('click', downloadResume);
         function downloadResume() {
         // Your Google Drive resume link
         const fileId = '1B0LxB0jmKH6vTI7cWnmkMFyc_EbwzCPh';
-        const resumeUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+        const resumeUrl = `https://drive.google.com/file/d/1B0LxB0jmKH6vTI7cWnmkMFyc_EbwzCPh/view?usp=sharing=${fileId}`;
     
         // Open in new tab for better user experience
         window.open(resumeUrl, '_blank');
     
         // Show confirmation message
         showNotification('📄 Opening resume in new tab...', 'success');
-        }
+          }
         });
         
         // Hire Me button
@@ -637,5 +629,6 @@
         }
     });
 </script>
+
 
 
