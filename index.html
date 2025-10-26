@@ -584,26 +584,38 @@
 
     // Initialize all event listeners when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
-        // Resume Download Functionality - UPDATED
-    function downloadResume() {
-        // Your Google Drive resume link - modified for auto-download
+        // Resume Download Functionality - PUT THIS RIGHT AFTER YOUR OTHER FUNCTIONS
+  function downloadResume() {
         const fileId = '1B0LxB0jmKH6vTI7cWnmkMFyc_EbwzCPh';
         const resumeUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
         
-        // Create invisible download link
         const link = document.createElement('a');
         link.href = resumeUrl;
-        link.download = 'Cybersecurity-Developer-Resume.pdf'; // Force download with this filename
+        link.download = 'Cybersecurity-Developer-Resume.pdf';
         link.style.display = 'none';
         
-        // Add to page and trigger click
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         
-        // Show success message
         showNotification('📄 Resume download started! Check your downloads folder.', 'success');
     }
+    
+    // ... other functions like hireMe(), viewProjectDetails(), etc ...
+    
+    // Initialize all event listeners when DOM is loaded - THIS STAYS THE SAME
+    document.addEventListener('DOMContentLoaded', function() {
+        // Resume download buttons
+        const downloadButtons = [
+            document.getElementById('downloadResume'),
+            document.getElementById('downloadResume2')
+        ];
+        
+        downloadButtons.forEach(button => {
+            if (button) {
+                button.addEventListener('click', downloadResume);
+            }
+        });
         
         // Hire Me button
         const hireMeButton = document.getElementById('hireMe');
@@ -636,6 +648,7 @@
         }
     });
 </script>
+
 
 
 
