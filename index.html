@@ -584,27 +584,6 @@
 
     // Initialize all event listeners when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
-        // Resume Download Functionality - PUT THIS RIGHT AFTER YOUR OTHER FUNCTIONS
-  function downloadResume() {
-        const fileId = '1B0LxB0jmKH6vTI7cWnmkMFyc_EbwzCPh';
-        const resumeUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-        
-        const link = document.createElement('a');
-        link.href = resumeUrl;
-        link.download = 'Cybersecurity-Developer-Resume.pdf';
-        link.style.display = 'none';
-        
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        
-        showNotification('📄 Resume download started! Check your downloads folder.', 'success');
-    }
-    
-    // ... other functions like hireMe(), viewProjectDetails(), etc ...
-    
-    // Initialize all event listeners when DOM is loaded - THIS STAYS THE SAME
-    document.addEventListener('DOMContentLoaded', function() {
         // Resume download buttons
         const downloadButtons = [
             document.getElementById('downloadResume'),
@@ -648,8 +627,3 @@
         }
     });
 </script>
-
-
-
-
-
