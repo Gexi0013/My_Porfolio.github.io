@@ -20,13 +20,15 @@ project-folder/
 │
 ├── index.html               # Main portfolio HTML file
 ├── images/                  # Folder containing all images
-│   ├── logo.png
+│   ├── logo.png             # Foder downloadable resume
 │   ├── hero-banner.jpg
 │   ├── profile.png
 │   ├── about-photo.png
 │   ├── E-Commerce Website.png
 │   ├── Task Management App.png
 │   └── Weather Dashboard.png
+├──  resume/
+│   ├── resume.pdf
 └── README.md                # Documentation
 ```
 
@@ -62,7 +64,7 @@ project-folder/
 If hosted on GitHub Pages, access the portfolio via:
 
 ```
-https://your-username.github.io/portfolio/
+[https://your-username.github.io/portfolio/](https://gexi0013.github.io/My_Porfolio.github.io/]
 ```
 
 ## Contributors
