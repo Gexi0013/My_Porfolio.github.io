@@ -64,7 +64,7 @@ project-folder/
 If hosted on GitHub Pages, access the portfolio via:
 
 ```
-[https://your-username.github.io/portfolio/](https://gexi0013.github.io/My_Porfolio.github.io/]
+[https://gexi0013.github.io/My_Porfolio.github.io/]
 ```
 
 ## Contributors
