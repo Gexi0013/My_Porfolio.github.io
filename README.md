@@ -28,7 +28,7 @@ project-folder/
 │   ├── Task Management App.png
 │   └── Weather Dashboard.png
 ├──  resume/
-│   ├── resume.pdf
+│   └── resume.pdf
 └── README.md                # Documentation
 ```
 
